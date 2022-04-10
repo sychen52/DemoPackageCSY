@@ -13,6 +13,7 @@ end
     @test 4 ∈ i
     @test !(6 in i)
     @test !(6 ∈ i)
+    @test 6 ∉ i
 end
 
 @testset "isempty" begin
