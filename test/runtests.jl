@@ -50,11 +50,11 @@ end
     # Write your tests here.
     for i in 1:3
         graph = create_graph(i)
-        @test list_equal(directly_connected(graph, 1), [1, 2, 3])
-        @test list_equal(directly_connected(graph, 2), [1, 2, 3])
-        @test list_equal(directly_connected(graph, 3), [1, 2, 3])
-        @test list_equal(directly_connected(graph, 4), [4, 5])
-        @test list_equal(directly_connected(graph, 5), [4, 5])
+        @test list_equal(reachable(graph, 1), [1, 2, 3])
+        @test list_equal(reachable(graph, 2), [1, 2, 3])
+        @test list_equal(reachable(graph, 3), [1, 2, 3])
+        @test list_equal(reachable(graph, 4), [4, 5])
+        @test list_equal(reachable(graph, 5), [4, 5])
     end
 end
 
