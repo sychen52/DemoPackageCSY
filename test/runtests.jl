@@ -81,3 +81,7 @@ end
         @test cc_equal(connected_components(graph), [[1, 2, 3], [4, 5]])
     end
 end
+
+@testset "interval" begin
+    include("interval.jl")
+end
