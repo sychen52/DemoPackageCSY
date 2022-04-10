@@ -26,7 +26,7 @@ function reachable(graph, start)
     function helper(start)
         connected = directly_connected(graph, start)
         for c in connected
-            if !(c in ret)
+            if c ∉ ret
                 push!(ret, c)
                 helper(c)
             end
@@ -51,4 +51,7 @@ function connected_components(graph)
 end
 
 export directly_connected, reachable, connected_components
+
+include("interval.jl")
+export Interval
 end
