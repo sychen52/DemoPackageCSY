@@ -1,4 +1,5 @@
 using DemoPackageCSY
+using Test
 
 @testset "min_max" begin
     i = Interval(3, 5)
@@ -46,6 +47,6 @@ end
 @testset "show" begin
     i1 = Interval(3, 5)
     i2 = Interval(6, 7)
-    @test print_to_string(i) == "\u301a3, 5\u301b"
+    @test print_to_string(i1) == "\u301a3, 5\u301b"
     @test print_to_string(i2 ∩ i1) == "∅"
 end
