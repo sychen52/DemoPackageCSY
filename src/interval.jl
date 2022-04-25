@@ -1,8 +1,18 @@
+"""
+    Interval(min, max)
+
+Interval struct
+"""
 struct Interval{T<:Real}
     min::T
     max::T
 end
 
+"""
+    Base.minimum(interval::Interval)
+
+Return the minimum of an interval
+"""
 function Base.minimum(interval::Interval)
     interval.min
 end
@@ -28,6 +38,17 @@ function Base.intersect(interval1::Interval, interval2::Interval)
         min(maximum(interval1), maximum(interval2)))
 end
 
+"""
+    Base.show(io::IO, interval::Interval)
+
+Show.
+
+# Example
+```jldoctest
+julia> Interval(1,2)
+〚1, 2〛
+```
+"""
 function Base.show(io::IO, interval::Interval)
     if isempty(interval)
         write(io, "∅")

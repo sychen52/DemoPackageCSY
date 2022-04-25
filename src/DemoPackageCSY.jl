@@ -21,6 +21,11 @@ function n_nodes(graph::Matrix{Bool})
     return size(graph, 1)
 end
 
+"""
+    reachable(graph, start)
+
+- link to [`connected_components(graph)`](@ref)
+"""
 function reachable(graph, start)
     ret = Set()
     function helper(start)
@@ -36,6 +41,11 @@ function reachable(graph, start)
     return collect(ret)
 end
 
+"""
+    connected_components(graph)
+
+Connected components.
+"""
 function connected_components(graph)
     ret = []
     visited = Set{Int64}()
