@@ -1,7 +1,7 @@
 name = "DemoPackageCSY"
 uuid = "cd721b34-f778-405c-8c69-59290fd814e7"
 authors = ["sychen52 <sychen52@gmail.com> and contributors"]
-version = "0.1.0"
+version = "1.0.0"
 
 [compat]
 julia = "1"
